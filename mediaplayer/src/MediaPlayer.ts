@@ -10,7 +10,7 @@ export interface MediaPlayerConfig {
 export class MediaPlayer {
   media: HTMLMediaElement;
   private plugins: MediaPlayerPlugin[];
-  container: HTMLElement;
+  container: HTMLElement | undefined;
 
   constructor(config: MediaPlayerConfig) {
     this.media = config.el;
@@ -22,7 +22,7 @@ export class MediaPlayer {
   initPlayer() {
     this.container = document.createElement('div');
     this.container.style.position = 'relative';
-    this.media.parentNode.insertBefore(this.container, this.media);
+    this.media!.parentNode!.insertBefore(this.container, this.media);
     this.container.appendChild(this.media);
   }
 

@@ -6,7 +6,7 @@ export interface AutoPauseConfig {
 }
 
 export class AutoPause implements MediaPlayerPlugin {
-  private player: MediaPlayer;
+  private player: MediaPlayer | undefined;
 
   constructor(private config: AutoPauseConfig = { threshold: 0.25 }) {
     this.handleIntersection = this.handleIntersection.bind(this);
@@ -28,9 +28,9 @@ export class AutoPause implements MediaPlayerPlugin {
     const isVisible = entry.intersectionRatio >= this.config.threshold;
     console.log({ intersectionRatio: entry.intersectionRatio, isVisible, threshold: this.config.threshold });
     if (isVisible) {
-      this.player.play();
+      this.player!.play();
     } else {
-      this.player.pause();
+      this.player!.pause();
     }
   }
 
@@ -38,9 +38,9 @@ export class AutoPause implements MediaPlayerPlugin {
     console.log(document.visibilityState);
     const isVisible = document.visibilityState === 'visible';
     if (isVisible) {
-      this.player.play();
+      this.player!.play();
     } else {
-      this.player.pause();
+      this.player!.pause();
     }
   }
 }

@@ -873,6 +873,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@guillermocorrea/mediaplayer@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@guillermocorrea/mediaplayer/-/mediaplayer-1.0.0.tgz#87817a720cf6468515def8b244a8302f921ea723"
+  integrity sha512-+hJTazdY+4pdeECYx/Szc978nOZQUyMRcIwsrOeGwrYwGVwFVMrX5/YFeIVClH9Ur2Re+fAyqeoJFm96GsMMjg==
+
 "@iarna/toml@^2.2.0":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"

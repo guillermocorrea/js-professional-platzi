@@ -1,0 +1,14 @@
+{
+  "name": "@guillermocorrea/mediaplayer",
+  "version": "1.0.0",
+  "main": "lib/MediaPlayer.js",
+  "license": "MIT",
+  "repository": "https://github.com/guillermocorrea/js-professional-platzi.git",
+  "author": "Luis Correa",
+  "scripts": {
+    "build": "tsc --p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  }
+}

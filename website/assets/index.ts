@@ -1,7 +1,7 @@
-import { MediaPlayer } from './MediaPlayer';
-import { AutoPlay } from './plugins/AutoPlay';
-import { AutoPause } from './plugins/AutoPause';
-import { AdsPlugin } from './plugins/Ads';
+import { MediaPlayer } from '@guillermocorrea/mediaplayer';
+import { AutoPlay } from '@guillermocorrea/mediaplayer/lib/plugins/AutoPlay';
+import { AutoPause } from '@guillermocorrea/mediaplayer/lib/plugins/AutoPause';
+import { AdsPlugin } from '@guillermocorrea/mediaplayer/lib/plugins/Ads';
 
 const video = document.querySelector('video');
 const playButton = document.getElementById('playButton');

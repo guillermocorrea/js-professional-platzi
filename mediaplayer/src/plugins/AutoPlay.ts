@@ -1,4 +1,4 @@
-import { MediaPlayer, MediaPlayerPlugin } from './../MediaPlayer';
+import { MediaPlayer, MediaPlayerPlugin } from '../MediaPlayer';
 
 export class AutoPlay implements MediaPlayerPlugin {
   run(player: MediaPlayer) {
