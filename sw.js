@@ -20,12 +20,12 @@ async function preCache() {
   return cache.addAll([
     '/',
     '/index.html',
-    '/assets/index.js',
-    '/assets/MediaPlayer.js',
-    '/assets/plugins/AutoPlay.js',
-    '/assets/plugins/AutoPause.js',
-    '/assets/index.css',
-    '/assets/BigBuckBunny.mp4',
+    // '/assets/index.js',
+    // '/assets/MediaPlayer.js',
+    // '/assets/plugins/AutoPlay.js',
+    // '/assets/plugins/AutoPause.js',
+    // '/assets/index.css',
+    // '/assets/BigBuckBunny.mp4',
   ]);
 }
 

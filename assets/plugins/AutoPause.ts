@@ -1,11 +1,19 @@
-export class AutoPause {
-  constructor() {
+import { MediaPlayerPlugin } from './../MediaPlayer';
+import { MediaPlayer } from '../MediaPlayer';
+
+export interface AutoPauseConfig {
+  threshold: number;
+}
+
+export class AutoPause implements MediaPlayerPlugin {
+  private player: MediaPlayer;
+
+  constructor(private config: AutoPauseConfig = { threshold: 0.25 }) {
     this.handleIntersection = this.handleIntersection.bind(this);
     this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
   }
 
-  run(player, config = { threshold: 0.25 }) {
-    this.config = config;
+  run(player: MediaPlayer) {
     this.player = player;
     const observer = new IntersectionObserver(this.handleIntersection, this.config);
     observer.observe(this.player.media);
@@ -13,7 +21,7 @@ export class AutoPause {
     document.addEventListener('visibilitychange', this.handleVisibilityChange);
   }
 
-  handleIntersection(entries) {
+  private handleIntersection(entries: IntersectionObserverEntry[]) {
     const entry = entries[0];
     console.log('handleIntersection', entry);
 
@@ -26,7 +34,7 @@ export class AutoPause {
     }
   }
 
-  handleVisibilityChange() {
+  private handleVisibilityChange() {
     console.log(document.visibilityState);
     const isVisible = document.visibilityState === 'visible';
     if (isVisible) {

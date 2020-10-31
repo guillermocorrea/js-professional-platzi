@@ -1,12 +1,13 @@
-import { MediaPlayer } from './MediaPlayer.js';
-import { AutoPlay } from './plugins/AutoPlay.js';
-import { AutoPause } from './plugins/AutoPause.js';
+import { MediaPlayer } from './MediaPlayer';
+import { AutoPlay } from './plugins/AutoPlay';
+import { AutoPause } from './plugins/AutoPause';
+import { AdsPlugin } from './plugins/Ads';
 
 const video = document.querySelector('video');
 const playButton = document.getElementById('playButton');
 const muteButton = document.getElementById('muteButton');
 
-const player = new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause()] });
+const player = new MediaPlayer({ el: video, plugins: [new AutoPlay(), new AutoPause(), new AdsPlugin()] });
 
 playButton.addEventListener('click', () => player.toggle());
 muteButton.addEventListener('click', () => player.toggleMute());
