@@ -6,9 +6,15 @@
   "author": "Luis Correa <ext-luis.correa@here.com>",
   "license": "MIT",
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html ejercicios/index.html ejercicios/**/*index.html"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.5"
+  },
+  "browserslist": [
+    "last 1 Chrome version",
+    "last 1 Firefox version"
+  ]
 }
